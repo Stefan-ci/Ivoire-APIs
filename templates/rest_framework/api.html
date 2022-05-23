@@ -1,0 +1,24 @@
+{% extends "rest_framework/base.html" %}
+
+
+{% block title %}
+    API - {% if name %} {{ name }} | {% endif %} {{ site_name }}
+{% endblock title %}
+
+
+{% block branding %}
+    <a class='navbar-brand' href="{% url 'home' %}">
+        {{ site_name }}
+    </a>
+{% endblock branding %}
+
+{% block userlinks %}{% endblock userlinks %}
+
+{% block breadcrumbs %}{% endblock breadcrumbs %}
+
+{% block breadcrumbs_empty %}{% endblock breadcrumbs_empty %}
+
+{% block request_forms %}{% endblock request_forms %}
+
+{% block description %}{% endblock description %}
+

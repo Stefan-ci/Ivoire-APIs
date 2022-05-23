@@ -1,0 +1,89 @@
+
+# GET http://127.0.0.1:8000/api/v1/news/with-related/399/ HTTP/1.1
+# apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
+
+
+# GET http://127.0.0.1:8000/api/v1/news/ HTTP/1.1
+# apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
+
+
+GET http://127.0.0.1:8000/api/v1/news/search/?category=flush&q=quis&pageSize=5&page=3 HTTP/1.1
+# apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
+
+
+# GET http://127.0.0.1:8000/api/v1/news/random/ HTTP/1.1
+# apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
+
+
+# GET http://127.0.0.1:8000/api/v1/news/random/list/?count=25 HTTP/1.1
+# apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
+
+
+# POST http://127.0.0.1:8000/api/v1/news/submit/ HTTP/1.1
+# Content-Type: application/json
+# apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
+
+# {
+#     "title": "Dictumst nullamauris te elementum posuere soluta, auctormauris option et temporsuspendisse.",
+#     "author": "John G. DOE",
+#     "picture_url": "opera.news/files/safari.jpg",
+#     "content": "Te temporsuspendisse accumsan laoreetphasellus volutpat posuere, eum et facilisicurabitur elit. Non tation eleifend est urna leopraesent, facilisinam adipiscing suspendisse tempor no. At sadipscing voluptua. Quammaecenas laoreet ultricies nascetur dictumstvivamus dapibus, dis ridiculus justocras rhoncus lacusnulla. Imperdiet enim sedfusce nascetur nam mazim, nequeetiam nibh te facilisis. Porttitor blandit nequeetiam. Feliscras magna clita varius ut tempor. Minim vel dapibusnam fermentumfusce, accusam vulputate laoreet magnis facilisisat risus. Nonumy curae velit duimauris erat, montes faucibus mauris morbi sociosqu. Himenaeos dictumstvivamus nobis. Nobis vitae facilisis etiam, ante iusto diaminteger posuere leo interdum dignissim consequatduis aliquip. Facilisisproin platea, duis pulvinarvestibulum ipsum cras eros. Aliquam turpis elementum. Urnamorbi orci egestasmauris sodalessed qui. Nec condimentum massapellentesque volutpat adipiscing takimata.",
+#     "summary": "Illum penatibus magnis sed montes. Facilisis in erosin facer aliquammauris congue nascetur sociis, facilisicurabitur euismod ligula mi habitasse amet quis. Qui conguenulla. Temporsuspendisse felis rutrum interdumdonec ullamcorper molestie accumsannulla muspellentesque, feugait sagittis cubilia convallis facilisisproin option tempus. Leopraesent aliquip sollicitudin sociis.",
+#     "tags": "Dictum temporsuspendisse accumsan volutpat",
+#     "category": "cells",
+#     "published_on": "Jeudi 5 Mars 2022",
+#     "language": "it",
+#     "website": "opera.news",
+#     "is_premium": false,
+#     "is_public": false,
+#     "is_submited": true
+# }
+
+
+
+
+
+
+
+
+#############################################################################################
+#############################################################################################
+#############################################################################################
+#############################################################################################
+#############################################################################################
+#############################################################################################
+#############################################################################################
+#############################################################################################
+#############################################################################################
+#############################################################################################
+#############################################################################################
+#############################################################################################
+#############################################################################################
+
+
+
+
+
+
+
+
+
+# GET http://127.0.0.1:8000/api/v1/receipes/with-related/12/ HTTP/1.1
+# apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
+
+
+# GET http://127.0.0.1:8000/api/v1/receipes/with-related/12/ HTTP/1.1
+# apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
+
+
+# GET http://127.0.0.1:8000/api/v1/receipes/ HTTP/1.1
+# apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
+
+
+# GET http://127.0.0.1:8000/api/v1/receipes/random/ HTTP/1.1
+# apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
+
+
+# GET http://127.0.0.1:8000/api/v1/receipes/random/list/?count=25 HTTP/1.1
+# apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
+
