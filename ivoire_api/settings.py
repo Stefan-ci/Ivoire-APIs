@@ -77,8 +77,9 @@ INSTALLED_APPS = [
     # 3rd PARTY APPS
     'storages',
     'corsheaders',
+    'import_export',
     'rest_framework',
-    'drf_api_logger',
+    # 'drf_api_logger',
     'cloudinary_storage',
 
 
@@ -120,7 +121,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'drf_api_logger.middleware.api_logger_middleware.APILoggerMiddleware',  # Added
+    # 'drf_api_logger.middleware.api_logger_middleware.APILoggerMiddleware',  # Added
 ]
 
 
@@ -398,7 +399,7 @@ CORS_ALLOW_METHODS = []
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
-        'rest_framework.renderers.BrowsableAPIRenderer',
+        # 'rest_framework.renderers.BrowsableAPIRenderer',
     ],
 }
 
@@ -412,11 +413,11 @@ REST_FRAMEWORK = {
 ########              API LOGGER CONFIGS          ###########
 #############################################################
 #############################################################
-DRF_API_LOGGER_DATABASE = True
-DRF_API_LOGGER_SIGNAL = True
-DRF_LOGGER_QUEUE_MAX_SIZE = 1
-DRF_LOGGER_INTERVAL = 1
-DRF_API_LOGGER_EXCLUDE_KEYS = []
+# DRF_API_LOGGER_DATABASE = True
+# DRF_API_LOGGER_SIGNAL = True
+# DRF_LOGGER_QUEUE_MAX_SIZE = 1
+# DRF_LOGGER_INTERVAL = 1
+# DRF_API_LOGGER_EXCLUDE_KEYS = []
 
 
 
