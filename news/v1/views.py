@@ -32,6 +32,21 @@ def articles_list_view(request):
         category = request.GET['category']
         articles = articles.filter(category=category)
 
+
+    if 'q' in request.GET:
+        query = request.GET['q']
+
+        if query is not None:
+            articles = articles.filter(
+                Q(title__contains=query)|
+                Q(author__contains=query)|
+                Q(content__contains=query)|
+                Q(summary__contains=query)|
+                Q(tags__contains=query)|
+                Q(category__contains=query)|
+                Q(language__contains=query)|
+                Q(website__contains=query)
+            )
     
     
     if 'pageSize' in request.GET:
@@ -96,6 +111,22 @@ def random_articles_list_view(request):
 
     if len(articles) >= 20:
         articles = random.sample(list(articles), 20)
+    
+
+    if 'q' in request.GET:
+        query = request.GET['q']
+
+        if query is not None:
+            articles = articles.filter(
+                Q(title__contains=query)|
+                Q(author__contains=query)|
+                Q(content__contains=query)|
+                Q(summary__contains=query)|
+                Q(tags__contains=query)|
+                Q(category__contains=query)|
+                Q(language__contains=query)|
+                Q(website__contains=query)
+            )
 
     if 'pageSize' in request.GET:
         try:
@@ -148,6 +179,22 @@ def random_article_view(request):
                 articles = Article.objects.filter(is_public=True, is_premium=True)
         except:
             pass
+    
+
+    if 'q' in request.GET:
+        query = request.GET['q']
+
+        if query is not None:
+            articles = articles.filter(
+                Q(title__contains=query)|
+                Q(author__contains=query)|
+                Q(content__contains=query)|
+                Q(summary__contains=query)|
+                Q(tags__contains=query)|
+                Q(category__contains=query)|
+                Q(language__contains=query)|
+                Q(website__contains=query)
+            )
 
 
     random_article = random.sample(list(articles), 1)
@@ -181,6 +228,7 @@ def article_detail_view(request, pk):
         except:
             pass
     
+    
 
     article = get_object_or_404(articles, pk=pk)
 
@@ -212,6 +260,22 @@ def article_detail_with_related_view(request, pk):
                 articles = Article.objects.filter(is_public=True, is_premium=True)
         except:
             pass
+        
+    
+    if 'q' in request.GET:
+        query = request.GET['q']
+
+        if query is not None:
+            articles = articles.filter(
+                Q(title__contains=query)|
+                Q(author__contains=query)|
+                Q(content__contains=query)|
+                Q(summary__contains=query)|
+                Q(tags__contains=query)|
+                Q(category__contains=query)|
+                Q(language__contains=query)|
+                Q(website__contains=query)
+            )
     
 
     article = get_object_or_404(articles, pk=pk)
@@ -260,6 +324,21 @@ def articles_by_category_list_view(request, category:str):
 
     if len(articles) >= 20:
         articles = random.sample(list(articles), 20)
+    
+    if 'q' in request.GET:
+        query = request.GET['q']
+
+        if query is not None:
+            articles = articles.filter(
+                Q(title__contains=query)|
+                Q(author__contains=query)|
+                Q(content__contains=query)|
+                Q(summary__contains=query)|
+                Q(tags__contains=query)|
+                Q(category__contains=query)|
+                Q(language__contains=query)|
+                Q(website__contains=query)
+            )
 
     if 'pageSize' in request.GET:
         try:
