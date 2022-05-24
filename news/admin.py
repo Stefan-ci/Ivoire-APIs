@@ -24,8 +24,8 @@ class PremiumAdmin(ArticleModelAdminStuffs):
     list_filter = ['is_public', 'is_submited', 'added_on', 'language']
 
 
-    def get_queryset(self):
-        qs = super().get_queryset()
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
         qs = Article.objects.filter(is_premium=True)
         return qs
 
@@ -41,8 +41,8 @@ class NonPremiumAdmin(ArticleModelAdminStuffs):
     list_filter = ['is_public', 'is_submited', 'added_on', 'language']
 
 
-    def get_queryset(self):
-        qs = super().get_queryset()
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
         qs = Article.objects.filter(is_premium=False)
         return qs
 
@@ -57,8 +57,8 @@ class PrivateAdmin(ArticleModelAdminStuffs):
     list_filter = ['is_premium', 'is_submited', 'added_on', 'language']
 
 
-    def get_queryset(self):
-        qs = super().get_queryset()
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
         qs = Article.objects.filter(is_public=False)
         return qs
 
@@ -73,8 +73,8 @@ class PublicAdmin(ArticleModelAdminStuffs):
     list_filter = ['is_premium', 'is_submited', 'added_on', 'language']
 
 
-    def get_queryset(self):
-        qs = super().get_queryset()
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
         qs = Article.objects.filter(is_public=True)
         return qs
 
@@ -90,8 +90,8 @@ class SubmitedAdmin(ArticleModelAdminStuffs):
     list_filter = ['is_public', 'is_premium', 'added_on', 'language']
 
 
-    def get_queryset(self):
-        qs = super().get_queryset()
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
         qs = Article.objects.filter(is_submited=True)
         return qs
 
@@ -107,8 +107,8 @@ class NonSubmitedAdmin(ArticleModelAdminStuffs):
     list_filter = ['is_public', 'is_premium', 'added_on', 'language']
 
 
-    def get_queryset(self):
-        qs = super().get_queryset()
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
         qs = Article.objects.filter(is_submited=False)
         return qs
 
