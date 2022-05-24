@@ -48,3 +48,60 @@ class Article(models.Model):
         exclude = set(string.punctuation)
         return ''.join(word for word in words if word not in exclude).split()
 
+
+
+
+
+
+
+"""Below are proxy models. Used for filtering articles and display them like tables"""
+class PremiumArticle(Article):
+    class Meta:
+        proxy = True
+        verbose_name = "Premium article"
+        verbose_name_plural = "Premium articles"
+
+
+
+
+class NonPremiumArticle(Article):
+    class Meta:
+        proxy = True
+        verbose_name = "Non-premium article"
+        verbose_name_plural = "Non-premium articles"
+    
+
+
+
+class PrivateArticle(Article):
+    class Meta:
+        proxy = True
+        verbose_name = "Private article"
+        verbose_name_plural = "Private articles"
+
+
+
+
+class PublicArticle(Article):
+    class Meta:
+        proxy = True
+        verbose_name = "Public article"
+        verbose_name_plural = "Public articles"
+
+
+
+
+class SubmitedArticle(Article):
+    class Meta:
+        proxy = True
+        verbose_name = "Submited article"
+        verbose_name_plural = "Submited articles"
+
+
+
+class NonSubmitedArticle(Article):
+    class Meta:
+        proxy = True
+        verbose_name = "Non-submited article"
+        verbose_name_plural = "Non-submited articles"
+
