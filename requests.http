@@ -1,5 +1,7 @@
+GET http://127.0.0.1:8000/api/request/chart/ HTTP/1.1v
 
-# GET http://127.0.0.1:8000/api/v1/news/with-related/399/ HTTP/1.1
+
+
 # apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
 
 
