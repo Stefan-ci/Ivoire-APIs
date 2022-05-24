@@ -3,10 +3,10 @@ Django==3.2.9
 django-ckeditor==6.4.1
 django-cloudinary-storage==0.3.0
 django-cors-headers==3.12.0
+django-import-export==2.7.1
 django-jsonfield==1.4.1
 django-storages==1.12.3
 djangorestframework==3.13.1
-drf-api-logger==1.1.10
 Pillow==9.1.1
 python-decouple==3.6
 RandomWords==0.3.0
