@@ -43,7 +43,7 @@ ADMINS = [
 
 
 SITE_NAME = 'IVOIRE APIs' # Name to be displayed in templates
-ADMIN_PAGE_URL = 'administration/django' # Admin page URL
+ADMIN_PAGE_URL = 'admin' # Admin page URL
 PROJECT_DB_MODE = 'sqlite' # For detecting db type & credentials (production, sqlite)
 
 
