@@ -1,11 +1,11 @@
 from django.contrib import messages
+from django.http import HttpResponse
 from core.forms import CreateUserForm
 from core.models import Documentation
+from django.shortcuts import redirect, render
 from core.decorators import unauthenticated_user
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
-from django.shortcuts import redirect, render, get_object_or_404
-from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 
 
@@ -167,6 +167,22 @@ def user_profile_view(request):
     context = {}
     template_name = 'public/accounts/profile.html'
     return render(request, template_name, context)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
