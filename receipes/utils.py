@@ -8,7 +8,7 @@ class ReceipeModelAdminStuffs(ImportExportModelAdmin):
 
     date_hierarchy = 'added_on'
     actions = ['mark_as_public', 'mark_as_private', 'mark_as_premium', 'mark_as_non_premium']
-    search_fields = ['name', 'details', 'tags', 'category', 'added_on',
+    search_fields = ['name', 'details', 'category', 'added_on',
         'ingredients__name', 'cuisine__name', 'submited__username']
 
 

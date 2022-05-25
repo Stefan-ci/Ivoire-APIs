@@ -5,7 +5,7 @@
 # apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
 
 
-GET http://127.0.0.1:8000/api/v1/news/search/?category=flush&q=quis&pageSize=5&page=3 HTTP/1.1
+# GET http://127.0.0.1:8000/api/v1/news/search/?category=flush&q=quis&pageSize=5&page=3 HTTP/1.1
 # apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
 
 
@@ -74,8 +74,8 @@ GET http://127.0.0.1:8000/api/v1/news/search/?category=flush&q=quis&pageSize=5&p
 # apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
 
 
-# GET http://127.0.0.1:8000/api/v1/receipes/ HTTP/1.1
-# apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
+GET http://127.0.0.1:8000/api/v1/receipes/ HTTP/1.1
+#apiKey: cgtPLfnzKW1uTPCDbpccXEZI2HmNgO_1
 
 
 # GET http://127.0.0.1:8000/api/v1/receipes/random/ HTTP/1.1
