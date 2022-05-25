@@ -18,7 +18,7 @@ from rest_framework.status import HTTP_200_OK, HTTP_511_NETWORK_AUTHENTICATION_R
 
 @api_view(['GET'])
 def receipes_list_view(request):
-    receipes = Receipe.objects.filter(is_public=True).using('receipes')
+    receipes = Receipe.objects.filter(is_public=True)
 
     if 'apiKey' in request.headers:
         try:
@@ -26,7 +26,7 @@ def receipes_list_view(request):
             hashed_key = hashlib.sha256(hash_str).hexdigest()
             profile = Profile.objects.get(hashed_api_key=hashed_key)
             if profile:
-                receipes = Receipe.objects.filter(is_public=True, is_premium=True).using('receipes')
+                receipes = Receipe.objects.filter(is_public=True, is_premium=True)
         except:
             pass
 
@@ -85,7 +85,7 @@ def receipes_list_view(request):
 
 @api_view(['GET'])
 def random_receipes_list_view(request):
-    receipes = Receipe.objects.filter(is_public=True).using('receipes')
+    receipes = Receipe.objects.filter(is_public=True)
 
     if 'apiKey' in request.headers:
         try:
@@ -93,7 +93,7 @@ def random_receipes_list_view(request):
             hashed_key = hashlib.sha256(hash_str).hexdigest()
             profile = Profile.objects.get(hashed_api_key=hashed_key)
             if profile:
-                receipes = Receipe.objects.filter(is_public=True, is_premium=True).using('receipes')
+                receipes = Receipe.objects.filter(is_public=True, is_premium=True)
         except:
             pass
 
@@ -145,7 +145,7 @@ def random_receipes_list_view(request):
 
 @api_view(['GET'])
 def random_receipe_view(request):
-    receipes = Receipe.objects.filter(is_public=True, is_premium=False).using('receipes')
+    receipes = Receipe.objects.filter(is_public=True, is_premium=False)
 
     if 'apiKey' in request.headers:
         try:
@@ -153,7 +153,7 @@ def random_receipe_view(request):
             hashed_key = hashlib.sha256(hash_str).hexdigest()
             profile = Profile.objects.get(hashed_api_key=hashed_key)
             if profile:
-                receipes = Receipe.objects.filter(is_public=True, is_premium=True).using('receipes')
+                receipes = Receipe.objects.filter(is_public=True, is_premium=True)
         except:
             pass
 
@@ -180,7 +180,7 @@ def random_receipe_view(request):
 @api_view(['GET'])
 def receipe_detail_view(request, pk):
     
-    receipes = Receipe.objects.filter(is_public=True, is_premium=False).using('receipes')
+    receipes = Receipe.objects.filter(is_public=True, is_premium=False)
     
     if 'apiKey' in request.headers:
         try:
@@ -189,7 +189,7 @@ def receipe_detail_view(request, pk):
             profile = Profile.objects.get(hashed_api_key=hashed_key)
             if profile:
                 print(f'Profile matched: {profile.user.username}')
-                receipes = Receipe.objects.filter(is_public=True, is_premium=True).using('receipes')
+                receipes = Receipe.objects.filter(is_public=True, is_premium=True)
         except:
             pass
     
@@ -215,7 +215,7 @@ def receipe_detail_view(request, pk):
 
 @api_view(['GET', 'POST'])
 def receipe_detail_with_related_view(request, pk):
-    receipes = Receipe.objects.filter(is_public=True, is_premium=False).using('receipes')
+    receipes = Receipe.objects.filter(is_public=True, is_premium=False)
 
     if 'apiKey' in request.headers:
         try:
@@ -223,7 +223,7 @@ def receipe_detail_with_related_view(request, pk):
             hashed_key = hashlib.sha256(hash_str).hexdigest()
             profile = Profile.objects.get(hashed_api_key=hashed_key)
             if profile:
-                receipes = Receipe.objects.filter(is_public=True, is_premium=True).using('receipes')
+                receipes = Receipe.objects.filter(is_public=True, is_premium=True)
         except:
             pass
     
@@ -262,7 +262,7 @@ def receipe_detail_with_related_view(request, pk):
 
 @api_view(['GET'])
 def receipes_by_category_list_view(request, category:str):
-    receipes = Receipe.objects.filter(is_public=True, is_premium=False, category=category).using('receipes')
+    receipes = Receipe.objects.filter(is_public=True, is_premium=False, category=category)
     
     if 'apiKey' in request.headers:
         try:
@@ -270,7 +270,7 @@ def receipes_by_category_list_view(request, category:str):
             hashed_key = hashlib.sha256(hash_str).hexdigest()
             profile = Profile.objects.get(hashed_api_key=hashed_key)
             if profile:
-                receipes = Receipe.objects.filter(is_public=True, is_premium=True).using('receipes')
+                receipes = Receipe.objects.filter(is_public=True, is_premium=True)
         except:
             pass
 

@@ -183,10 +183,6 @@ DATABASES = {
         'ENGINE': config('DEFAULT_DB_ENGINE'),
         'NAME': config('DEFAULT_DB_NAME'),
     },
-    'receipes': {
-        'ENGINE': config('DEFAULT_RECEIPES_DB_ENGINE'),
-        'NAME': config('DEFAULT_RECEIPES_DB_NAME'),
-    }
 }
 
 
