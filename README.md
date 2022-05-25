@@ -5,7 +5,9 @@ Hey, Welcome to **Ivoire APIs**, a bundle of unofficial APIs services built in D
 ## Extra
 
 [Latest Release](https://github.com/Stefan-ci/Ivoire-APIs/releases/latest)
+
 [Dependencies graph](https://github.com/Stefan-ci/Ivoire-APIs/graphs/commit-activity)
+
 [Watchers](https://github.com/Stefan-ci/Ivoire-APIs/watchers)
 
 ## Browsers
