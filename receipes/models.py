@@ -11,8 +11,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Cuisine(models.Model):
-    submited_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
-    name = models.CharField(null=True, blank=True, max_length=20)
+    name = models.CharField(null=True, blank=True, max_length=20, unique=True)
     other_details = models.TextField(null=True, blank=True)
     added_on = models.DateTimeField(auto_now_add=True)
 
@@ -35,7 +34,6 @@ class Cuisine(models.Model):
 
 
 class Ingredient(models.Model):
-    submited_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
     name = models.CharField(null=True, blank=True, max_length=500)
     quantity = models.CharField(null=True, blank=True, max_length=20)
     added_on = models.DateTimeField(auto_now_add=True)
@@ -83,7 +81,7 @@ class Receipe(models.Model):
 
 
 
-    """Methods to handle easily with each article."""
+    """Methods to handle easily with each Receipe."""
     def receipe_tags(self):
         """
             Since tags are saved as sentence, make sure it's the default one 
@@ -96,6 +94,68 @@ class Receipe(models.Model):
 
         exclude = set(string.punctuation)
         return ''.join(word for word in words if word not in exclude).split()
+
+
+
+
+
+
+
+
+
+"""Below are proxy models. Used for filtering receipes and display them like tables"""
+class PremiumReceipe(Receipe):
+    class Meta:
+        proxy = True
+        verbose_name = "Premium Receipe"
+        verbose_name_plural = "Premium Receipes"
+
+
+
+
+class NonPremiumReceipe(Receipe):
+    class Meta:
+        proxy = True
+        verbose_name = "Non-premium Receipe"
+        verbose_name_plural = "Non-premium Receipes"
+    
+
+
+
+class PrivateReceipe(Receipe):
+    class Meta:
+        proxy = True
+        verbose_name = "Private Receipe"
+        verbose_name_plural = "Private Receipes"
+
+
+
+
+class PublicReceipe(Receipe):
+    class Meta:
+        proxy = True
+        verbose_name = "Public Receipe"
+        verbose_name_plural = "Public Receipes"
+
+
+
+
+class SubmitedReceipe(Receipe):
+    class Meta:
+        proxy = True
+        verbose_name = "Submited Receipe"
+        verbose_name_plural = "Submited Receipes"
+
+
+
+class NonSubmitedReceipe(Receipe):
+    class Meta:
+        proxy = True
+        verbose_name = "Non-submited Receipe"
+        verbose_name_plural = "Non-submited Receipes"
+
+
+
 
 
 
