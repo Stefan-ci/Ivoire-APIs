@@ -76,6 +76,7 @@ INSTALLED_APPS = [
 
     # 3rd PARTY APPS
     'storages',
+    'ckeditor',
     'corsheaders',
     'import_export',
     'rest_framework',
