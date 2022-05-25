@@ -25,13 +25,11 @@ class IngredientSerializer(ModelSerializer):
 
 
 class ReceipeSerializer(ModelSerializer):
-    submited_by = ReadOnlyField(source='submited_by.username')
-    cuisine = CuisineSerializer(many=False)
+    cuisine = ReadOnlyField(source='cuisine.name')
     ingredients = IngredientSerializer(many=True)
     class Meta:
         model = Receipe
-        fields = ['name', 'details', 'receipe_tags', 'category', 'cuisine', 
-            'ingredients']
+        fields = ['id', 'name', 'details', 'category', 'cuisine', 'ingredients']
 
     def perform_create(self):
         pass
