@@ -7,7 +7,7 @@ from rest_framework.serializers import ModelSerializer, ReadOnlyField
 class CuisineSerializer(ModelSerializer):
     class Meta:
         model = Cuisine
-        fields = ['id', 'submited_by', 'name', 'other_details', 'added_on']
+        fields = ['name', 'other_details']
 
 
 
@@ -17,7 +17,7 @@ class CuisineSerializer(ModelSerializer):
 class IngredientSerializer(ModelSerializer):
     class Meta:
         model = Ingredient
-        fields = ['id', 'submited_by', 'name', 'quantity', 'added_on']
+        fields = ['name', 'quantity']
 
 
 
@@ -30,9 +30,13 @@ class ReceipeSerializer(ModelSerializer):
     ingredients = IngredientSerializer(many=True)
     class Meta:
         model = Receipe
-        fields = ['id', 'submited_by', 'name', 'details', 'receipe_tags', 'category', 
-            'is_premium', 'is_public', 'is_submited', 'added_on', 'cuisine', 'ingredients']
+        fields = ['name', 'details', 'receipe_tags', 'category', 'cuisine', 
+            'ingredients']
 
     def perform_create(self):
         pass
 
+    def create(self, validated_data):
+        """Create and return a new `Receipe` instance, given the validated data."""
+        pass
+    
