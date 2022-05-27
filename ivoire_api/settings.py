@@ -58,6 +58,7 @@ NEWS_SCRAPING_URLS = [
     ('Jeune Afrique', 'https://www.jeuneafrique.com/'), #pays/cote-divoire/
     ('Linfodrome', 'https://www.linfodrome.com/'),
     ('AIP - Agence Ivoirienne de Presse', 'https://www.aip.ci/'),
+    ('Fraternité matin', 'https://www.fratmat.info/'),
 ]
 
 
