@@ -47,9 +47,23 @@ ADMIN_PAGE_URL = 'admin' # Admin page URL
 PROJECT_DB_MODE = 'sqlite' # For detecting db type & credentials (production, sqlite)
 
 
-# List of URLs from where we are scraping articles' contents.
-NEWS_SCRAPING_URLS = []
 
+
+
+
+# List of URLs from where we are scraping articles' contents.
+NEWS_SCRAPING_URLS = [
+    ('Ivoire Hebdo', 'https://ivoirhebdo.com/'),
+    ('Abidjan.net', 'https://news.abidjan.net/'),
+    ('Jeune Afrique', 'https://www.jeuneafrique.com/'), #pays/cote-divoire/
+    ('Linfodrome', 'https://www.linfodrome.com/'),
+    ('AIP - Agence Ivoirienne de Presse', 'https://www.aip.ci/'),
+]
+
+
+
+
+RECIPES_SCRAPING_URLS = []
 
 
 
