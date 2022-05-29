@@ -6,9 +6,9 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 class Article(models.Model):
     submited_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
-    title = models.CharField(null=True, blank=True, max_length=500, default='No title')
-    author = models.CharField(null=True, blank=True, max_length=500, default='No author')
-    picture_url = models.CharField(null=True, blank=True, max_length=500, default='No picture')
+    title = models.CharField(null=True, blank=True, max_length=5000, default='No title')
+    author = models.CharField(null=True, blank=True, max_length=5000, default='No author')
+    picture_url = models.CharField(null=True, blank=True, max_length=5000, default='No picture')
     content = RichTextUploadingField(null=True, blank=True, default='No content')
     summary = models.TextField(null=True, blank=True, default='No summary')
     tags = models.TextField(null=True, blank=True, default='No tags')
@@ -16,6 +16,7 @@ class Article(models.Model):
     published_on = models.CharField(null=True, blank=True, max_length=200, default='No date found')
     language = models.CharField(null=True, blank=True, max_length=50, default='Not defined')
     website = models.CharField(null=True, blank=True, max_length=100, default='Not provided')
+    full_url = models.CharField(null=True, blank=True, max_length=5000, default='No URL')
     
     is_public = models.BooleanField(default=True)
     is_premium = models.BooleanField(default=False)
